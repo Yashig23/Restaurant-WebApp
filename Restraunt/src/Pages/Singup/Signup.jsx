@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Logout = () => {
+const Signup = () => {
   return <>
 
 <section class="bg-gray-100 min-h-screen flex box-border justify-center items-center" style={{backgroundImage: "url('https://t4.ftcdn.net/jpg/01/81/53/73/240_F_181537393_3LeVm5BDOdcmtIcqmIvlcwfV7jxLLqTF.jpg')", backgroundSize: 'cover'}}>
@@ -50,7 +50,6 @@ const Logout = () => {
 
                     Login with FaceBook
                 </button>
-            <div class="mt-10 text-sm border-b border-gray-500 py-5 playfair tooltip">Forget password?</div>
 
             <div class="mt-4 text-sm flex justify-between items-center container-mr">
                 <p class="mr-3 md:mr-0 ">If you already have an account..</p>
@@ -63,5 +62,5 @@ const Logout = () => {
   </>
 }
 
-export default Logout
+export default Signup
 

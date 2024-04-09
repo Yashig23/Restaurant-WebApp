@@ -54,7 +54,7 @@ const Login = () => {
 
             <div class="mt-4 text-sm flex justify-between items-center container-mr">
                 <p class="mr-3 md:mr-0 ">If you don't have an account..</p>
-                <button class="hover:border register text-white bg-[#412604] hover:border-gray-400 rounded-xl py-2 px-5 hover:scale-110 hover:bg-[#002c7424] font-semibold duration-300">Register</button>
+                <button onClick={()=> window.location.href = '/signup'} class="hover:border register text-white bg-[#412604] hover:border-gray-400 rounded-xl py-2 px-5 hover:scale-110 hover:bg-[#002c7424] font-semibold duration-300">Register</button>
             </div>
         </div>
         <div class="md:block hidden w-1/2">
