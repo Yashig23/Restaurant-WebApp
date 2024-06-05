@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import { Navigate, useNavigate, Link } from 'react-router-dom'
-import authService from '../../firebaseAuth/authFB'
+// import authService from '../../firebaseAuth/authFB'
 import { auth } from '../../constants/firebase'
-import {toast} from 'react-toastify'
+// import {toast} from 'react-toastify'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import {getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
