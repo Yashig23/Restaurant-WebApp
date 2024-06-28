@@ -18,13 +18,13 @@ function Carousal() {
         <div className="slider-container">
           <Slider {...settings}>
             {CarouselImages.map((e) => (
-              <div key={e.id} className=" p-2">  {/* Add padding here for gap */}
-                <div className="border rounded-xl p-3 bg-[#d2d2cf]">
-                    <div className="flex justify-center">
+              <div key={e.id} className="p-8 ">  
+                <div className="border p-0 bg-[#d2d2cf] rounded-xl">
+                    <div className="flex justify-center m-3 p-2">
                   <img src={e.img} style={{ width: 300, height: 300 }} className="rounded-xl" />
                   </div>
-                  <div className="flex justify-between items-center mt-3 mb-3 px-7">
-                  <div className="text-yellow-950 font-semibold text-[18px]">
+                  <div className="flex justify-between items-center mt-3 mb-3 pl-12 pr-12 flex-wrap">
+                  <div className="text-yellow-950 font-semibold text-[18px] ">
                     <h3>{e.title}</h3>
                   </div>
                   <div>

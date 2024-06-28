@@ -3,6 +3,8 @@ import Carousal from '../../Components/Carousal/Carousal'
 import Layout from '../../Components/Layout/Layout'
 import { menu } from '../../constants/index'
 import Location from '../../Components/Location/Location'
+import SearchBar from './SearchBar'
+import MenuSection from './MenuSection'
 
 const Menu = () => {
   return (
@@ -12,6 +14,11 @@ const Menu = () => {
       <div className='bg-yellow-950'> 
       <div className='w-full h-10 bg-transparent m-3'></div>
     <Carousal></Carousal>
+    <div className='bg-white'>
+      
+    <SearchBar></SearchBar>
+    <div className='flex'>
+    <MenuSection></MenuSection>
     {menu.map((category)=>(
      <div className='bg-white p-4'>
        <h2>{category.name}</h2>
@@ -33,6 +40,8 @@ const Menu = () => {
     ))}
  
     {/* </div> */}
+    </div>
+    </div>
     </div>
     <Location></Location>
     </Layout>

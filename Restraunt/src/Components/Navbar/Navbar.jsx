@@ -10,7 +10,7 @@ const Navbar = () => {
  const [toggle, setToggle] = useState(false);
 
   return<>
-  <div>
+  <div className='mb-10 mt-0'>
   <div className='flex w-full fixed py-1 justify-between z-10' style={{backgroundImage: "url('https://i.pinimg.com/236x/6f/0d/de/6f0dde1a22fdc746b9abe8224735afae.jpg')", backgroundSize: 'cover'}}>
 
     <div className=" flex w-full max-w-7xl pb-3 pt-3 px-5 rounded-full mx-auto ">
@@ -31,14 +31,14 @@ const Navbar = () => {
  </ul> 
 
 
-<div className='flex ml-auto '>
-<button onClick={()=>window.location.href='/login'}className='px-7  rounded-2xl text-[18px] font-medium py-1 text-brown-500 bg-yellow-500 hover:bg-yellow-600'> Login </button>
+<div className='flex ml-auto  '>
+<button onClick={()=>window.location.href='/login'}className='px-7  rounded-2xl text-[18px] font-medium py-1 text-brown-500 bg-yellow-500 hover:bg-yellow-600 '> Login </button>
 </div>
 
     </div> 
     </div> 
 
-    <div className='flex justify-end items-center flex-1 m-2 cursor-pointer ' onClick={()=> setToggle(!toggle)}>
+    <div className='bg-white flex justify-end items-center flex-1 m-2 cursor-pointer ' onClick={()=> setToggle(!toggle)}>
       <img src={toggle ? close1 : menu} alt='menu/close svg' className='w-[30px] h-[30px] object-contain cursor-pointer sm:hidden '  onClick={()=> setToggle(!toggle)}/>
        <div className={`${!toggle ? 'hidden' : 'flex'} p-6 black-gradient absolute top-0 xl:hidden right-0 mx-4 my-2 min-w-[140px] rounded-xl`}>
         <ul className='list-none flex justify-end items-center flex-col gap-4'>

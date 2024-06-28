@@ -1,4 +1,19 @@
+import {  bun,
+  burger,
+  milkshake,
+  pasta,
+  ramen,
+  spaguetti,
+  springrolls,
+  pizza,
+  dosa,
+  sandwitch} from '../assets/png'
+
 export const navLinks = [
+    {
+      id: "home",
+      title: "Home"
+    },
     {
       id: "about",
       title: "About",
@@ -29,52 +44,63 @@ export const navLinks = [
   {
     id: "burger",
     title: "Burger",
-    img: "https://i.pinimg.com/236x/eb/cb/c6/ebcbc6aaa9deca9d6efc1efc93b66945.jpg"
+    img: "https://i.pinimg.com/236x/eb/cb/c6/ebcbc6aaa9deca9d6efc1efc93b66945.jpg",
+    png: burger
   },
   {
     id: "pizza",
     title: "Pizza",
-    img: "https://i.pinimg.com/236x/46/5d/f4/465df43334839b48eaf933f14f9f4e4a.jpg"
+    img: "https://i.pinimg.com/236x/46/5d/f4/465df43334839b48eaf933f14f9f4e4a.jpg",
+    png: pizza
   },
   {
     id: "chinese",
     title: "Chinese",
-    img: "https://i.pinimg.com/236x/90/2c/87/902c87a8a3987143d7fd3b3ac12d4e14.jpg"
+    img: "https://i.pinimg.com/236x/90/2c/87/902c87a8a3987143d7fd3b3ac12d4e14.jpg",
+    png: spaguetti
   },
   {
     id: "sandwitches",
     title: "Sandwitches",
-    img: "https://i.pinimg.com/236x/0c/03/81/0c03812bf3566770402d871bfc1b6358.jpg"
+    img: "https://i.pinimg.com/236x/0c/03/81/0c03812bf3566770402d871bfc1b6358.jpg",
+    png: sandwitch
   },
   {
     id: "dosa",
     title: "South Indian",
-    img: "https://i.pinimg.com/236x/fd/2b/e7/fd2be7bb46b9eca348f92cc08375aed7.jpg"
+    img: "https://i.pinimg.com/236x/fd/2b/e7/fd2be7bb46b9eca348f92cc08375aed7.jpg",
+    png: dosa
   },
   {
     id: "shakes",
     title: "Shakes",
-    img: "https://i.pinimg.com/236x/1f/97/f4/1f97f4244fa49dcd7267bf734acf3d33.jpg"
+    img: "https://i.pinimg.com/236x/1f/97/f4/1f97f4244fa49dcd7267bf734acf3d33.jpg",
+    png: milkshake
   },
   {
     id: "momo",
     title: "momo",
-    img: "https://i.pinimg.com/236x/36/37/7f/36377f95fc182227d9424b2f6144e9f1.jpg"
+    img: "https://i.pinimg.com/236x/36/37/7f/36377f95fc182227d9424b2f6144e9f1.jpg",
+    png: bun
+
   },
   {
     id: "rolls",
     title: "Rolls",
-    img: "https://i.pinimg.com/236x/fb/97/e4/fb97e499ba98ad480645d03b7fc5f732.jpg"
+    img: "https://i.pinimg.com/236x/fb/97/e4/fb97e499ba98ad480645d03b7fc5f732.jpg",
+    png: springrolls
   },
   {
     id: "pasta",
     title: "Pasta",
-    img: "https://i.pinimg.com/736x/8c/4d/88/8c4d88254265b6cc535aea98e9af35f1.jpg"
+    img: "https://i.pinimg.com/736x/8c/4d/88/8c4d88254265b6cc535aea98e9af35f1.jpg",
+    png: pasta
   },
   {
     id: "maggie",
     title: "Maggie",
-    img: "https://i.pinimg.com/236x/00/94/1e/00941e23a30dce9332d4ea0c980cbce8.jpg"
+    img: "https://i.pinimg.com/236x/00/94/1e/00941e23a30dce9332d4ea0c980cbce8.jpg",
+    png: ramen
   }
   ]
 
@@ -303,6 +329,45 @@ export const navLinks = [
       ]
     }
   ];
+
+export const reviews = [
+  {
+    id:"1",
+    name:" Arav Dubey",
+    content: " The food service was fast and efficient. One of the best restraunt for street food.",
+    rating: "5",
+    img: "https://media.istockphoto.com/id/1141737652/photo/portrait-of-a-confident-young-man.jpg?s=612x612&w=0&k=20&c=YQaYjmbPGpJ0DXxGSTLHFPWsBKjBsAmR_l-XHYt2vHU="
+  },
+  {
+    id:"2",
+    name:" Deepak Gupta",
+    content: "Food Taste is Top Notch, Under Budget, quantity and quality is great.",
+    rating: "4.5",
+    img: "https://live.staticflickr.com/8099/8601630139_8e954769e2_z.jpg"
+  },
+  {
+    id:"3",
+    name:" Shruti Tiwari",
+    content: " We order the food for guest , and they all liked it alot, will order again from this restraunt.",
+    rating: "4.5",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj-g7RtDYpqBVjm2a-XZStd0GrL7ElK-uCVA&s"
+  },
+  {
+    id:"4",
+    name:" Sunny Rajak",
+    content: "Really like the manchurain of this restarunt",
+    rating: "5",
+    img: "https://as2.ftcdn.net/v2/jpg/03/70/94/67/1000_F_370946798_Z0Sa3x1HjwYdOQXdjpbS39AIrASJlSzB.jpg"
+  },
+  {
+    id:"5",
+    name:" Akriti Gupta",
+    content: "The Catering service was top notch, under the budget and great service",
+    rating: "4",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW8tRAbqq2a0wWu2Bt8IiH_CRiDDIm1Ltd5w&s"
+  },
+  
+]
   
   
 

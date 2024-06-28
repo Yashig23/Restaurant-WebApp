@@ -4,6 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { Country, State, City } from 'country-state-city';
 import { useNavigate } from 'react-router-dom';
+import Layout from '../../Components/Layout/Layout.jsx'
 
 const Contact = () => {
 
@@ -134,6 +135,7 @@ const submitData=async(e)=>{
 
 
   return <>
+  <Layout>
   <section class="bg-gray-100 min-h-screen flex box-border justify-center items-center" style={{backgroundImage: "url('https://i.pinimg.com/236x/25/4f/e8/254fe8480f08339ae9a84c74d2cc3c8f.jpg')", backgroundSize: 'cover'}}>
     <div class="bg-[#dac6b3] rounded-2xl flex p-5 items-center m-10">
         <div class="md:w-1/2 px-8">
@@ -184,6 +186,7 @@ const submitData=async(e)=>{
     </div>
     
 </section>
+</Layout>
   </>
 }
 
