@@ -19,27 +19,6 @@ const Menu = () => {
     <SearchBar></SearchBar>
     <div className='flex'>
     <MenuSection></MenuSection>
-    {menu.map((category)=>(
-     <div className='bg-white p-4'>
-       <h2>{category.name}</h2>
-       {category.subcategories ? (
-        category.subcategories.map((e)=>(
-          <div className="bg-blue-200" key={e.itemId}>{e.name}</div>
-        ))
-       ):(
-        <div className='bg-red-200'></div>
-       )}
-       {category.items ? (
-        category.items.map((e)=>(
-          <div className='bg-green-200' key={e.itemId}>{e.name}</div>
-        ))
-       ): (
-        <div className='bg-red-200'></div>
-       )}
-     </div>
-    ))}
- 
-    {/* </div> */}
     </div>
     </div>
     </div>
