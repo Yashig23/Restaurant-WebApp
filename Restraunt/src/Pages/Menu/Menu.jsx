@@ -5,6 +5,7 @@ import { menu } from '../../constants/index'
 import Location from '../../Components/Location/Location'
 import SearchBar from './SearchBar'
 import MenuSection from './MenuSection'
+import MenuContent from './MenuContent'
 
 const Menu = () => {
   return (
@@ -19,6 +20,9 @@ const Menu = () => {
     <SearchBar></SearchBar>
     <div className='flex'>
     <MenuSection></MenuSection>
+    <div className='m-3'>
+      <MenuContent></MenuContent>
+    </div>
     </div>
     </div>
     </div>
