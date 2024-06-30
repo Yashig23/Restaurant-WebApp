@@ -31,8 +31,8 @@ export const navLinks = [
         title: "Order",
     },
     {
-        id: "reviews",
-        title: "Reviews"
+        id: "review",
+        title: "Review"
     },
     {
       id: "menu",
