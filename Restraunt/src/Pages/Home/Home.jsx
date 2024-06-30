@@ -112,7 +112,7 @@ const Home = () => {
             </div>
           </div>
           <div className=' flex justify-center items-center '>
-            <button className='border rounded-2xl text-black font-thin p-4 hover:bg-black hover:text-white hover:font-semibold  hover:duration-300 hover:scale-110 m-4'>Order now</button>
+            <button onClick={()=> window.location.href = '/menu'} className='border rounded-2xl text-black font-thin p-4 hover:bg-black hover:text-white hover:font-semibold  hover:duration-300 hover:scale-110 m-4'>Order now</button>
            </div>
            
           
@@ -127,7 +127,17 @@ const Home = () => {
           Having a Review For Us?
         </div>
         <div className='flex justify-center text-center m-4'>
-        <button className='border rounded-2xl text-white font-thin p-4 hover:bg-white hover:text-black hover:font-semibold  hover:duration-300 hover:scale-110 '> Add Review</button>
+        <button onClick ={()=> window.location.href = '/review'} className='border rounded-2xl text-white font-thin p-4 hover:bg-white hover:text-black hover:font-semibold  hover:duration-300 hover:scale-110 '> Add Review</button>
+        </div>
+       </section>
+
+       {/* Contact Us */}
+       <section style={{backgroundImage: "url('https://i.pinimg.com/236x/6f/0d/de/6f0dde1a22fdc746b9abe8224735afae.jpg')", backgroundSize: 'cover'}} className='p-4'>
+        <div className='text-white p-0 flex justify-center text-center text-[25px] font-thin m-2'>
+          Wanna Contact Us?
+        </div>
+        <div className='flex justify-center text-center m-4'>
+        <button onClick={()=>window.location.href ='/contact'} className='border rounded-2xl text-white font-thin p-4 hover:bg-white hover:text-black hover:font-semibold  hover:duration-300 hover:scale-110 '>Contact Us</button>
         </div>
        </section>
 
@@ -135,5 +145,5 @@ const Home = () => {
     </>
   )
 }
-
+{()=> window.location.href = '/signup'}
 export default Home
