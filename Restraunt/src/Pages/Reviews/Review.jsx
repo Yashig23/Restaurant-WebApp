@@ -6,7 +6,7 @@ import customerexperience from '../../assets/Gifs/customer-experience (1).png'
 
 const Review = () => {
 
-  const [rate, setRate] = useState(0);
+  const [rate, setRate] = useState(null);
 
   const numbers = [];
   for(let i=0; i<5; i++){
@@ -24,9 +24,8 @@ const Review = () => {
         <div className="bg-black text-white py-5">
           <div className="container mx-auto flex flex-col md:flex-row my-6 md:my-24">
             <div className="flex flex-col w-full lg:w-1/3 p-8">
-              <p className="ml-6 text-yellow-300 text-lg uppercase ">REVIEW</p>
               <p className="text-3xl md:text-5xl my-4 leading-relaxed ">Leave us a feedback!</p>
-              <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+              <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100 m-3">
                 Please provide your valuable feedback as your feedback Matters...
               </p>
               <div>
