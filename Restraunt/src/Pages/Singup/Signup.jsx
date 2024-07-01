@@ -7,6 +7,8 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { GoogleAuthProvider } from 'firebase/auth'
 import { useNavigate} from 'react-router-dom'
 import { FacebookAuthProvider } from "firebase/auth";
+import Navbar from '../../Components/Navbar/Navbar'
+import Footer from '../../Components/Footer/Footer'
 
 const Signup = () => {
     const [name, setName] = useState('');
@@ -69,7 +71,7 @@ const Signup = () => {
     // }
 
   return <>
-
+<Navbar></Navbar>
 <section class="bg-gray-100 min-h-screen flex box-border justify-center items-center" style={{backgroundImage: "url('https://t4.ftcdn.net/jpg/01/81/53/73/240_F_181537393_3LeVm5BDOdcmtIcqmIvlcwfV7jxLLqTF.jpg')", backgroundSize: 'cover'}}>
     <div class="bg-[#dac6b3] rounded-2xl flex max-w-3xl p-5 items-center">
     <div class="md:block hidden w-1/2">
@@ -121,6 +123,7 @@ const Signup = () => {
         
     </div>
 </section>
+<Footer></Footer>
   </>
 }
 
