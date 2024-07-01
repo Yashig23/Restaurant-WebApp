@@ -6,6 +6,8 @@ import { auth } from '../../constants/firebase'
 // import {toast} from 'react-toastify'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import {getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import Navbar from '../../Components/Navbar/Navbar'
+import Footer from '../../Components/Footer/Footer'
 
 
 const Login = () => {
@@ -72,6 +74,7 @@ const Login = () => {
         
     }
   return <>
+  <Navbar></Navbar>
   <section class="bg-gray-100 min-h-screen flex box-border justify-center items-center" style={{backgroundImage: "url('https://t4.ftcdn.net/jpg/01/54/10/45/240_F_154104587_w41ZJghFlXpwskJEM9dvEVdVHl3tZWIM.jpg')", backgroundSize: 'cover'}}>
     <div class="bg-[#dac6b3] rounded-2xl flex max-w-3xl p-5 items-center">
         <div class="md:w-1/2 px-8">
@@ -113,6 +116,7 @@ const Login = () => {
         </div>
     </div>
 </section>
+<Footer></Footer>
   </>
 }
 
