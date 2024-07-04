@@ -9,11 +9,6 @@ const About = () => {
   return (
     <>
       <Navbar></Navbar>
-      {/* <div className='font-bold text-[100px] text-white mt-19'>About</div> */}
-      {/*Photos of restraunt */}
-      {/*Histpry of restraunt */}
-      {/* about restraunt */}
-      {/* services about restraunt*/}
       <AboutCarousal></AboutCarousal>
       <section>
         <div className="text-[20px] font-medium flex justify-center bg-black text-white p-5">

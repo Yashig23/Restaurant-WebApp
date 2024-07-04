@@ -122,7 +122,7 @@ const Home = () => {
         </section>
 
        {/* Add Review */}
-       <section className='bg-black p-4'>
+       <section className='bg-black p-12'>
         <div className='text-white p-0 flex justify-center text-center text-[25px] font-thin m-2'>
           Having a Review For Us?
         </div>
@@ -132,7 +132,7 @@ const Home = () => {
        </section>
 
        {/* Contact Us */}
-       <section style={{backgroundImage: "url('https://i.pinimg.com/236x/6f/0d/de/6f0dde1a22fdc746b9abe8224735afae.jpg')", backgroundSize: 'cover'}} className='p-4'>
+       <section style={{backgroundImage: "url('https://i.pinimg.com/236x/6f/0d/de/6f0dde1a22fdc746b9abe8224735afae.jpg')", backgroundSize: 'cover'}} className='p-12'>
         <div className='text-white p-0 flex justify-center text-center text-[25px] font-thin m-2'>
           Wanna Contact Us?
         </div>
