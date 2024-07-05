@@ -368,6 +368,70 @@ export const reviews = [
   },
   
 ]
+
+export const aboutImages = [
+  {
+    id: "burger",
+    title: "Burger",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSi82Yzr_TI_csJUSv1IqveRCrhvb-oAlC-A&s",
+    png: burger
+  },
+  {
+    id: "pizza",
+    title: "Pizza",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRylNb3nqIR7heFI4EYgmDe5Wsd4eEcDaPeVw&s",
+    png: pizza
+  },
+  {
+    id: "chinese",
+    title: "Chinese",
+    img: "https://i.pinimg.com/236x/90/2c/87/902c87a8a3987143d7fd3b3ac12d4e14.jpg",
+    png: spaguetti
+  },
+  {
+    id: "sandwitches",
+    title: "Sandwitches",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRuQkdQ-0jZ7XrkxaTvQyPpQ8affPTokC45g&s",
+    png: sandwitch
+  },
+  {
+    id: "dosa",
+    title: "South Indian",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN7GS2zKgfeNgQLrD4vB_3ybsghrL5cNc3_w&s",
+    png: dosa
+  },
+  {
+    id: "shakes",
+    title: "Shakes",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI2qoGFynwwQODv9Swo0U3HU-jsllCYYYA9g&s",
+    png: milkshake
+  },
+  {
+    id: "momo",
+    title: "momo",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlcKOX7akvE_4rKpwdoT-UOBEvFDTlmQgXRw&s",
+    png: bun
+
+  },
+  {
+    id: "rolls",
+    title: "Rolls",
+    img: "https://i.pinimg.com/236x/fb/97/e4/fb97e499ba98ad480645d03b7fc5f732.jpg",
+    png: springrolls
+  },
+  {
+    id: "pasta",
+    title: "Pasta",
+    img: "https://i.pinimg.com/736x/8c/4d/88/8c4d88254265b6cc535aea98e9af35f1.jpg",
+    png: pasta
+  },
+  {
+    id: "maggie",
+    title: "Maggie",
+    img: "https://i.pinimg.com/236x/00/94/1e/00941e23a30dce9332d4ea0c980cbce8.jpg",
+    png: ramen
+  }
+]
   
   
 

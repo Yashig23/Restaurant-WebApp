@@ -6,6 +6,9 @@ import { CarouselImages } from '../../constants'
 import {gifs} from '../../assets/gif'
 import ReviewCarousal from '../../Components/Carousal/ReviewCarousal'
 import onlineOrder from '../../assets/Gifs/online-shop.gif'
+import chef from '../../assets/Gifs/chef.png'
+import foodDelivery from '../../assets/Gifs/food-delivery.png'
+
 const Home = () => {
   return (
     <>
@@ -21,14 +24,14 @@ const Home = () => {
         {/* About Us Part */}
         <div className='flex  p-8 bg-yellow-900  '  >
           <div style={{ backgroundImage: "url('https://i.pinimg.com/236x/ec/60/f2/ec60f241b51353146cc3b11a9287928b.jpg')", backgroundSize: 'cover' }} className='flex rounded-xl'>
-            <div className='w-[50%] flex flex-wrap hidden lg:block'>
-              <img src={bgRemovedImg} className='pl-20 ' />
+            <div className='w-[50%]  hidden lg:block'>
+              <img src={chef} className='m-3 p-3' />
             </div>
-            <div className='w-[50%] m-2'>
-              <div className='text-white text-[50px] font-semibold flex justify-center items-center mt-6 flex-wrap'>
+            <div className='w-auto m-2 '>
+              <div className='text-white text-[50px] font-thin flex justify-center items-center mt-6 flex-wrap'>
                 <h1>About Us</h1>
               </div>
-              <div className='text-white text-xl font-medium mt-10 mr-2 ml-2'>
+              <div className='text-white text-xl font-light mt-10 mr-2 ml-2 flex justify-center pl-10 pr-10 pt-2 pb-2'>
                 <p>Welcome to R Fast Food, your go-to destination for mouth-watering street-style fast food! Nestled in the heart of Sanskardhani Jabalpur, we have been serving delectable delights for over a decade, bringing the authentic flavors of the streets to your table.</p>
               </div>
               <div className='flex justify-center items-center m-7 flex-wrap'>
@@ -104,7 +107,7 @@ const Home = () => {
             <div className='flex pt-0 pb-0 pl-5 pr-5'>
            
           <div className='m-3 p-1'>
-          <img src={onlineOrder} className='w-[250px] h-[300px]'></img>
+          <img src={foodDelivery} className='w-[300px] h-[300px]'></img>
           </div>
           <div className='mt-5 text-black text-xl font-light'>
             <div> Enjoy our delicious meals at home with our easy online ordering. Choose your favorites, customize your dishes, and get them delivered or opt for curbside pickup. Quick, convenient, and tasty! </div> <br></br>
