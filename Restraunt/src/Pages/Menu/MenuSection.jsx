@@ -17,7 +17,7 @@ const MenuSection = () => {
   return (
     <>
       <section >
-        <div className=' overflow-x-hidden h-[500px] w-[300px] overflow-y-scroll m-2 border-r-2 border-slate-200'>
+        <div className=' overflow-x-hidden h-[500px] w-[300px] overflow-y-scroll m-2 border-r-2 border-slate-200 '>
           {menu.map((category) => (
             <div id={category.id} className='bg-neutral-100 p-4  justify-between m-2  border-b-2 border-black rounded hover:bg-neutral-200 hover:duration-300 hover:scale-100'>
               <h2 onClick={() => handleSelect(category.id)} className='font-light text-[17px] '>{category.name}</h2>
@@ -40,7 +40,7 @@ const MenuSection = () => {
                       ) : (
                         subCat.items.map((item) => (
 
-                          <div id={item.itemId} className='bg-slate-800 text-white p-3 m-0 text-[16px] font-extralight border-b-2 border-b-white hover:bg-white hover:text-black hover:scale-100 hover:duration-300'>
+                          <div id={item.itemId} className='bg-slate-500 text-white p-3 m-0 text-[16px] font-extralight border-b-2 border-b-white hover:bg-white hover:text-black hover:scale-100 hover:duration-300'>
                             {item.name}
 
                           </div>
@@ -53,7 +53,7 @@ const MenuSection = () => {
 
                   : category.items ? (
                     category.items.map((item) => (
-                      <div key={item.itemId} id={item.itemId} className='bg-slate-800 text-white p-3 m-0 text-[16px] font-extralight border-b-2 border-b-white hover:bg-white hover:text-black hover:scale-100 hover:duration-300'>
+                      <div key={item.itemId} id={item.itemId} className='bg-slate-500 text-white p-3 m-0 text-[16px] font-extralight border-b-2 border-b-white hover:bg-white hover:text-black hover:scale-100 hover:duration-300'>
                         {item.name} - {item.price}
                       </div>
                     ))

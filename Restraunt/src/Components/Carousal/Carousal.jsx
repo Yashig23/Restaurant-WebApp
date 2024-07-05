@@ -18,8 +18,8 @@ function Carousal() {
         <div className="slider-container">
           <Slider {...settings}>
             {CarouselImages.map((e) => (
-              <div key={e.id} className="p-8 ">  
-                <div className="border p-0 bg-[#d2d2cf] rounded-xl">
+              <div key={e.id} className="p-8">  
+                <div className="border p-0 bg-[#fefefe] rounded-xl">
                     <div className="flex justify-center m-3 p-2">
                   <img src={e.img} style={{ width: 300, height: 300 }} className="rounded-xl" />
                   </div>

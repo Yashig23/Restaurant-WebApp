@@ -149,10 +149,10 @@ export const navLinks = [
           subId: 3,
           name: 'Idli',
           items: [
-            { itemId: 1, name: 'Idli Sambar', price:{ pec1 : '25', pec2: '40'} },
-            { itemId: 2, name: 'Idli Chatni Coconut',  price:{ pec1 : '30', pec2: '50'} },
+            { itemId: 1, name: 'Idli Sambar', price:[{ type:'pec1', cost:'30'}, { type:'pec2', cost:'50'}] },
+            { itemId: 2, name: 'Idli Chatni Coconut', price:[{ type:'pec1', cost:'30'}, { type:'pec2', cost:'50'}] },
             { itemId: 3, name: 'Idli Fry',  price: '60' },
-            { itemId: 4, name: 'Wada Sambar',  price:{ pec1 : '30', pec2: '50'}}
+            { itemId: 4, name: 'Wada Sambar',  price:[{ type:'pec1', cost:'30'}, { type:'pec2', cost:'50'}]}
           ]
         }
       ]
@@ -165,35 +165,35 @@ export const navLinks = [
           subId: 1,
           name: 'Noodles',
           items: [
-            { itemId: 1, name: 'Veg Noodles',  price: {half: '40', full: '80'} },
-            { itemId: 2, name: 'Veg Sezewan Noodles' , price: {half: '45', full: '90'}},
-            { itemId: 3, name: 'Paneer Noodles' , price: {half: '60', full: '120'}},
-            { itemId: 4, name: 'Manchurain Noodles', price: {half: '50', full: '100'} },
-            { itemId: 5, name: 'Manchurian Paneer Noodles' , price: {half: '60', full: '120'}},
-            { itemId: 7, name: 'Veg Allmix Noodles' , price: {half: '60', full: '120'}}
+            { itemId: 1, name: 'Veg Noodles',  price:[{ type:'half', cost:'40'}, { type:'full', cost:'90'}] },
+            { itemId: 2, name: 'Veg Sezewan Noodles' , price:[{ type:'half', cost:'40'}, { type:'full', cost:'90'}]},
+            { itemId: 3, name: 'Paneer Noodles' ,price:[{ type:'half', cost:'60'}, { type:'full', cost:'120'}]},
+            { itemId: 4, name: 'Manchurain Noodles',price:[{ type:'half', cost:'50'}, { type:'full', cost:'100'}]},
+            { itemId: 5, name: 'Manchurian Paneer Noodles' ,price:[{ type:'half', cost:'60'}, { type:'full', cost:'120'}]},
+            { itemId: 7, name: 'Veg Allmix Noodles' , price:[{ type:'half', cost:'60'}, { type:'full', cost:'120'}]}
           ]
         },
         {
           subId: 2,
           name: 'Manchurian',
           items: [
-            { itemId: 1, name: 'Dry Manchurian', price: {half: '80', full: '150'} },
-            { itemId: 2, name: 'Gravy Manchurian', price: {half: '70', full: '130'} },
-            { itemId: 3, name: 'Paneer Manchurian', price: {half: '100', full: '180'} },
-            { itemId: 3, name: 'Chilli Paneer Dry', price: {half: '100', full: '180'} },
-            { itemId: 3, name: 'Chilli Paneer Gravy', price: {half: '100', full: '180'} },
+            { itemId: 1, name: 'Dry Manchurian',price:[{ type:'half', cost:'80'}, { type:'full', cost:'150'}] },
+            { itemId: 2, name: 'Gravy Manchurian', price:[{ type:'half', cost:'70'}, { type:'full', cost:'130'}]},
+            { itemId: 3, name: 'Paneer Manchurian', price:[{ type:'half', cost:'100'}, { type:'full', cost:'180'}]},
+            { itemId: 3, name: 'Chilli Paneer Dry',  price:[{ type:'half', cost:'100'}, { type:'full', cost:'180'}] },
+            { itemId: 3, name: 'Chilli Paneer Gravy',  price:[{ type:'half', cost:'100'}, { type:'full', cost:'180'}] },
           ]
         },
         {
           subId: 3,
           name: 'Fried Rice',
           items: [
-            { itemId: 1, name: 'Veg Fried Rice', price: {half: '40', full: '80'} },
-            { itemId: 2, name: 'Sezewan Rice', price: {half: '45', full: '90'} },
-            { itemId: 3, name: 'Paneer Rice', price: {half: '60', full: '120'} },
-            { itemId: 4, name: 'Manchurain Rice', price: {half: '50', full: '100'} },
-            { itemId: 5, name: 'Manchurian Paneer Rice', price: {half: '60', full: '120'} },
-            { itemId: 6, name: 'Veg Biryani', price: {half: '60', full: '120'} },
+            { itemId: 1, name: 'Veg Fried Rice',  price:[{ type:'half', cost:'40'}, { type:'full', cost:'80'}]},
+            { itemId: 2, name: 'Sezewan Rice',  price:[{ type:'half', cost:'45'}, { type:'full', cost:'90'}] },
+            { itemId: 3, name: 'Paneer Rice',  price:[{ type:'half', cost:'60'}, { type:'full', cost:'120'}] },
+            { itemId: 4, name: 'Manchurain Rice',  price:[{ type:'half', cost:'50'}, { type:'full', cost:'100'}]},
+            { itemId: 5, name: 'Manchurian Paneer Rice', price:[{ type:'half', cost:'60'}, { type:'full', cost:'120'}]},
+            { itemId: 6, name: 'Veg Biryani',price:[{ type:'half', cost:'60'}, { type:'full', cost:'120'}]},
 
           ]
         }
