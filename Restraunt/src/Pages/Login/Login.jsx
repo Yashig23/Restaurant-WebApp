@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Navigate, useNavigate, Link } from 'react-router-dom'
 // import authService from '../../firebaseAuth/authFB'
 import { auth } from '../../constants/firebase'
-// import {toast} from 'react-toastify'
+import {toast} from 'react-toastify'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import {getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import Navbar from '../../Components/Navbar/Navbar'
@@ -22,8 +22,9 @@ const Login = () => {
         try {
             const userCredentials = await signInWithEmailAndPassword(auth, email, password);
             const user = userCredentials.user;
+            const mail2 = userCredentials.user.email
             if (user) {
-                console.log(user);
+                localStorage.setItem("userMail", mail2)
                 toast.success("Signed in successfully", {
                     position: 'top-right',
                     autoClose: 2000,
@@ -37,24 +38,43 @@ const Login = () => {
                 navigate('/');
             } else {
                 console.log("user not found");
+                toast.warn("User not found", {
+                    position: 'top-right',
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored"
+                })
+
             }
         } catch (error) {
             setError(error.message);
+            toast.error("Error while login", {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+            });
             console.log("error", error.code, error.message);
         }
     }
 
     
     const handleGoogleSignIn=async()=>{
-        console.log("clicked google");
-        // const auth = getAuth();
         const provider = new GoogleAuthProvider();
         try{
             const result = await signInWithPopup(auth, provider);
-            // const credential = GoogleAuthProvider.credentialFromResult(result);
-            // const token = credential.accessToken;
             const user = result.user
+            const mail2 = result.user.email
             if(user){
+                localStorage.setItem("userMail", mail2)
                 toast.success("Signed in successfully", {
                     position: 'top-right',
                     autoClose: 2000,
@@ -65,11 +85,20 @@ const Login = () => {
                     progress: undefined,
                     theme: "colored"
                 });
-                console.log("Google sign-in Successful", user)
                 navigate('/');
             }
         }catch(error){
             setError(error, "error during google sign-in");
+            toast.error("Error while login", {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+            });
         }
         
     }

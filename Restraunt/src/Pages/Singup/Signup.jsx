@@ -23,17 +23,38 @@ const Signup = () => {
         try {
             const userCredentials = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredentials.user;
+            const userEmail = userCredentials.user.email;
             if (user) {
                 localStorage.setItem("userName", JSON.stringify(user));
-                console.log(user);
+                localStorage.setItem("userMail", userEmail);
+                console.log(user, userEmail);
                 navigate('/');
-                return user;
+                toast.success("User Signed in successfully", {
+                    position: 'top-right',
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored"
+                });
             } else {
                 console.log("Unsuccessful");
             }
         } catch (error) {
-            setError(error);  // Ensure setError is defined, or replace it with your error handling method
             console.log(error, error.code, error.message);
+            setError(error.message);
+            toast.error("Error occured while signing in", {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+            });
         }
     };
 
@@ -43,32 +64,37 @@ const Signup = () => {
         const provider = new GoogleAuthProvider();
         try{
             const result = await signInWithPopup(auth, provider);
-            // const credential = GoogleAuthProvider.credentialFromResult(result);
-            // const token = credential.accessToken;
             const user = result.user
+            const mail2 = result.user.email
             if(user){
-                console.log("Google sign-in Successful", user)
+                localStorage.setItem("userMail", mail2)
+                toast.success("Signed in successfully", {
+                    position: 'top-right',
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored"
+                });
                 navigate('/');
             }
         }catch(error){
-            setError(error, "error during google sign-in");
+            setError(error, "error during sign-in");
+            toast.error("Error while login", {
+                position: 'top-right',
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+            });
         }
         
     }
-
-    // const handleFacebookSignIn=async()=>{
-    //     const provider = new FacebookAuthProvider();
-    //     try{
-    //         const result = await signInWithPopup(auth, provider);
-    //         const user = result.user;
-    //         if(user){
-    //             console.log("Google sign-in Successful", user)
-    //             navigate('/');
-    //         }
-    //     }catch(error){
-    //         console.log("Error while signing in Facebook", error.code, error.message)
-    //     }
-    // }
 
   return <>
 <Navbar></Navbar>
@@ -108,12 +134,6 @@ const Signup = () => {
 
                     Login with Google
                 </button>
-                {/* <button class="bg-white border py-2 w-full rounded-xl mt-5 flex justify-center items-center text-sm hover:scale-105 duration-300 hover:bg-[#60a8bc4f] font-medium">
-                <svg width="25px" class="mr-3" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Facebook-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-200.000000, -160.000000)" fill="#153684">
-                   <path d="M225.638355,208 L202.649232,208 C201.185673,208 200,206.813592 200,205.350603 L200,162.649211 C200,161.18585 201.185859,160 202.649232,160 L245.350955,160 C246.813955,160 248,161.18585 248,162.649211 L248,205.350603 C248,206.813778 246.813769,208 245.350955,208 L233.119305,208 L233.119305,189.411755 L239.358521,189.411755 L240.292755,182.167586 L233.119305,182.167586 L233.119305,177.542641 C233.119305,175.445287 233.701712,174.01601 236.70929,174.01601 L240.545311,174.014333 L240.545311,167.535091 C239.881886,167.446808 237.604784,167.24957 234.955552,167.24957 C229.424834,167.24957 225.638355,170.625526 225.638355,176.825209 L225.638355,182.167586 L219.383122,182.167586 L219.383122,189.411755 L225.638355,189.411755 L225.638355,208 L225.638355,208 Z" id="Facebook"> </path> </g> </g> </g></svg>
-
-                    Login with FaceBook
-                </button> */}
 
             <div class="mt-4 text-sm flex justify-between items-center container-mr">
                 <p class="mr-3 md:mr-0 ">If you already have an account..</p>

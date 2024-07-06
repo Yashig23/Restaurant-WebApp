@@ -15,7 +15,7 @@ function Carousal() {
       pauseOnHover: true
     };
     return (
-        <div className="slider-container">
+        <div className="slider-container pl-20 pr-20">
           <Slider {...settings}>
             {CarouselImages.map((e) => (
               <div key={e.id} className="p-8">  

@@ -9,6 +9,48 @@ import {  bun,
   dosa,
   sandwitch} from '../assets/png'
 
+export const linkLogOut = [
+  {
+    id: "home",
+    title: "Home"
+  },
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "services",
+    title: "Services",
+  },
+  {
+    id: "menu",
+    title: "Menu"
+}
+]  
+
+export const navLinksAdmin =[
+  {
+    id: "contactRequest",
+    title: "Contact",
+  },
+  {
+      id: "orderDetails",
+      title: "Orders",
+  },
+  {
+      id: "reviewList",
+      title: "Reviews"
+  },
+  {
+    id: "menuList",
+    title: "Menu"
+  },
+  {
+    id: "dashboard",
+    title: "DashBoard"
+  }
+]  
+
 export const navLinks = [
     {
       id: "home",
