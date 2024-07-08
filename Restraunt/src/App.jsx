@@ -7,12 +7,14 @@ import { ToastContainer } from 'react-toastify'
 import { About, Contact, Menu, Login, Signup, Review, Services, Nopage, Home, Order } from './Pages'
 import DashBoard from './Pages/Dashboard/Dashboard'
 import { ProtectedAdminRoute, ProtectedUserRoute } from './Components/ProtedtedRoute/ProtectedRoute'
+import ContextProvider from './Context/ContextProvider'
 
 function App() {
 
 
   return (
     <>
+    <ContextProvider>
     <Router>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -30,6 +32,7 @@ function App() {
       </Routes>
       <ToastContainer/>
     </Router>
+    </ContextProvider>
     
     </>
   )

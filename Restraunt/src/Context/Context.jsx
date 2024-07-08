@@ -1,13 +1,7 @@
-// import React from "react";
-// import {createContext} from "react";
-// import { useState } from "react";
+import React, { useContext } from 'react'
+import { useState, useEffect } from 'react'
+import { createContext } from 'react'
 
-// export const MyContext = createContext();
+const MyContext = createContext();
 
-// export const ContextProvider = (props)=>{
-//     const [menuList, setMenuList] = useState();
-//     return (<ContextProvider value={{menuList, setMenuList}}>
-//         {props.children}
-//     </ContextProvider>
-//     )
-// }
+export default MyContext;

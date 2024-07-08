@@ -1,8 +1,14 @@
 import React from "react";
 import { useState } from "react";
+import { useContext } from "react";
+import MyContext from "../../Context/Context.jsx";
 import { menu } from "../../constants/index.js";
 
 const MenuContent = () => {
+ 
+  const context = useContext(MyContext);
+  const {addItem, orderList, setOrderList} = context
+
   return (
     <section>
       <div className="overflow-y-scroll h-[900px]">
@@ -35,7 +41,7 @@ const MenuContent = () => {
                               <div className="flex justify-end">Rs {item.price}</div>
                               
                             )}
-                  <div className="flex justify-end"><button className="pt-1 pb-1 pl-3 pr-3 rounded-md border-2 border-slate-200 font-normal text-green-400 text-[15px] hover:bg-green-400 hover:text-white hover:scale-110 hover:font-medium duration-300 ">Add</button></div>    
+                  <div className="flex justify-end"><button onClick={() => addItem(item)} className="pt-1 pb-1 pl-3 pr-3 rounded-md border-2 border-slate-200 font-normal text-green-400 text-[15px] hover:bg-green-400 hover:text-white hover:scale-110 hover:font-medium duration-300 ">Add</button></div>    
                           </div>
                           
                         ))}
@@ -58,7 +64,7 @@ const MenuContent = () => {
                             ) : (
                               <div className="flex justify-end">Rs {item.price}</div>
                             )}
-                        <div className="flex justify-end"><button className="pt-1 pb-1 pl-3 pr-3 rounded-md border-2 border-slate-200 font-normal text-green-400 text-[15px] hover:bg-green-400 hover:text-white hover:scale-110 hover:font-medium duration-300 ">Add</button></div>    
+                        <div className="flex justify-end"><button onClick={() => addItem(item)} className="pt-1 pb-1 pl-3 pr-3 rounded-md border-2 border-slate-200 font-normal text-green-400 text-[15px] hover:bg-green-400 hover:text-white hover:scale-110 hover:font-medium duration-300 ">Add</button></div>    
                       </div>
                     ))
                   )}
@@ -69,7 +75,7 @@ const MenuContent = () => {
                 <div className="grid grid-cols-3 bg-neutral-50 text-slate-500 p-4 m-0 text-[18px] font-extralight border-b-2 border-b-white w-full hover:bg-neutral-200 hover:text-black hover:scale-100 hover:duration-300">
                   <div key={item.itemId} >{item.name}</div>
                   <div className="flex justify-end">Rs {item.price}</div>
-                  <div className="flex justify-end"><button className="pt-1 pb-1 pl-3 pr-3 rounded-md border-2 border-slate-200 font-normal text-green-400 text-[15px] hover:bg-green-400 hover:text-white hover:scale-110 hover:font-medium duration-300 ">Add</button></div>    
+                  <div className="flex justify-end"><button onClick={() => addItem(item)}  className="pt-1 pb-1 pl-3 pr-3 rounded-md border-2 border-slate-200 font-normal text-green-400 text-[15px] hover:bg-green-400 hover:text-white hover:scale-110 hover:font-medium duration-300 ">Add</button></div>    
                 </div>
               ))
             ) : (

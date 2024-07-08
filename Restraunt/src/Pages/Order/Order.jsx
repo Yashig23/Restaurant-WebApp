@@ -1,24 +1,30 @@
-import React from 'react'
-import Navbar from '../../Components/Navbar/Navbar'
-import Footer from '../../Components/Footer/Footer'
-import orderSum from "./orderSum";
-import orderList from './orderList';
+import React, { useEffect } from "react";
+import Navbar from "../../Components/Navbar/Navbar";
+import OrderList1 from "./OrderList1";
+import { useContext } from "react";
+import MyContext from "../../Context/Context.jsx";
+import OrderSum1 from "./OrderSum1"; // Assuming this is another component you have
 
 const Order = () => {
+  const { orderList } = useContext(MyContext);
+  console.log(orderList)
+
   return (
     <>
-    <Navbar></Navbar>
-    <section className='mt-0 '>
-      <div className="p-5 mt-20 ml-2 mb-2 mr-2 bg-white text-slate-800 flex justify-center items-center text-[22px] font-medium"> Order </div>
-    </section>
-    <section>
-      <orderList></orderList>
-    </section>
-    <scetion>
-      <orderSum></orderSum>
-    </scetion>
+      <Navbar />
+      <section className='pt-6 '>
+        <div className="p-5  bg-black text-white flex justify-center items-center text-[22px] font-light flex-wrap"> Order </div>
+      </section>
+      <div className=''>
+        <div>
+        <OrderList1 />
+        </div>
+        {/* <div>
+        <OrderSum1 />
+        </div> */}
+      </div>  
     </>
-  )
-}
+  );
+};
 
-export default Order
+export default Order;
