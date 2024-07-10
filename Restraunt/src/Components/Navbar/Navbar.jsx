@@ -13,21 +13,22 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [email, setEmail] = useState('');
 
-  // const user = localStorage.getItem('userMail');
-  // console.log(user);
 
   useEffect(()=>{
     const user = localStorage.getItem('userMail');
+
     setEmail(user);
+    console.log(user);
   }, [])
+
+  console.log(email);
 
   const logout = async () => {
     try {
       const auth = getAuth();
-      localStorage.clear('userMail')
       await signOut(auth);
       console.log("logged out")
-      console.log(user)
+      localStorage.clear('userMail')
       toast.success("Logged Out successfully", {
         position: 'top-right',
         autoClose: 2000,
@@ -39,6 +40,7 @@ const Navbar = () => {
         theme: "colored"
       });
     } catch (error) {
+      console.log(error, error.message);
       toast.error("Error while logging out", {
         position: 'top-right',
         autoClose: 2000,

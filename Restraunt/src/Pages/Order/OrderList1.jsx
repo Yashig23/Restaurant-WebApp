@@ -15,13 +15,8 @@ const OrderList1 = () => {
   const itemIndex = orderList.findIndex(item => item.itemId === itemId);
 
   if (itemIndex !== -1) {
-    // Make a copy of the item to update
     const updatedItem = { ...orderList[itemIndex] };
-    
-    // Update the quantity property
     updatedItem.quantity = updatedItem.quantity + 1;
-
-    // Update orderList with the updated item
     const updatedOrderList = [...orderList];
     updatedOrderList[itemIndex] = updatedItem;
 

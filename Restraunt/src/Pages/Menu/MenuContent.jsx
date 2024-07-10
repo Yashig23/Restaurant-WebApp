@@ -7,12 +7,12 @@ import { menu } from "../../constants/index.js";
 const MenuContent = () => {
  
   const context = useContext(MyContext);
-  const {addItem, orderList, setOrderList} = context
+  const {addItem, orderList, setOrderList,  searchQuery, setSearchQuery, displayItems, setDisplayItems} = context
 
   return (
     <section>
       <div className="overflow-y-scroll h-[900px]">
-        {menu.map((category) => (
+        {displayItems.map((category) => (
           <div key={category.id} className="text-[21px] font-normal m-2  ">
             {category.name}
             {category.subcategories ? (
