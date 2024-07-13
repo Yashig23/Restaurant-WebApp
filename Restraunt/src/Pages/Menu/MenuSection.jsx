@@ -1,5 +1,6 @@
 import { menu } from '../../constants/index'
 import { useState } from 'react'
+import Category from './Category';
 
 const MenuSection = () => {
 
@@ -66,6 +67,7 @@ const MenuSection = () => {
 
           ))}
         </div>
+        <Category></Category>
       </section>
     </>
   )
